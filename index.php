@@ -97,7 +97,7 @@ echo"<br>Hacer un programa en PHP para ayudar a un trabajador de Postobón a sab
 o menos, se le pagará $20000 por hora, pero si trabaja más de 40 horas entonces las horas extras se le pagarán a $25 por hora. Ejecute su
 código para calcular el salario con 36 horas trabajadas. <br><br>";
 
-$numerodehoras=38;
+$numerodehoras=36;
 $valorhora1=20000;
 $valorhora2=25000;
 $sueldoSemanal=0;
@@ -105,15 +105,82 @@ $sueldoSemanal=0;
 if($numerodehoras<=40)
 {
     $sueldoSemanal=$numerodehoras*$valorhora1;
-    echo "Total de: ".$numerodehoras." Horas, se obtiene un valor de: $".$valorhora1;
-    echo "<br>El salario semanal es de: $".$sueldoSemanal;
+    echo "Para un total de: ".$numerodehoras." Horas, se obtiene un valor hora de: $".$valorhora1;
+    echo "<br>El salario devengado en la semana es de: $".$sueldoSemanal;
 }
 elseif($numerodehoras>40)
 {
     $sueldoSemanal=$numerodehoras*$valorhora2;
-    echo "Total de: ".$numerodehoras." Horas, se obtiene un valor de: $".$valorhora2;
+    echo "Para un total de: ".$numerodehoras." Horas, se obtiene un valor hora de: $".$valorhora2;
 }
 
+echo"<br><br> Ejercicio 5 <br>";
+echo"<br>Bancolombia contrata sus servicios de desarrollador para realizar un programa en PHP que permita almacenar información de nombre,
+teléfono dirección y salario de 5 usuarios de una sucursal llamada sucursal A. Además, su programa debe estar en la capacidad de sumar
+todos los salarios de los usuarios de la sucursal A en una sola variable llamada sumatoriaSalarios y así poder comparar dicho valor con las
+sucursales B cuyo valor de salarios mensual es de 20.000.000 y la sucursal C cuyo valor de salarios mensuales es de 15.000.000. Permita que
+su código muestre cual sucursal tiene la mejor sumatoria de salarios y además muestre en pantalla la información completa de los 5
+usuarios de la sucursal A <br><br>";
+
+echo "Los usuarios registrados en la sucursal A son:<br><br>";
+$usuario1="Juan Perez - ";
+$usuario2="Ana Gaviria - ";
+$usuario3="Pedro Mesa - ";
+$usuario4="Catalina Castaño - ";
+$usuario5="Gabriel Rodriguez - ";
+
+$telefono1="3224567898 - ";
+$telefono2="3014569852 - ";
+$telefono3="3108965474 - ";
+$telefono4="3148555555 - ";
+$telefono5="3001234879 - ";
+
+$direccion1="Cll 100 sur # 35a-25 - ";
+$direccion2="Cll 90 # 10-80 - ";
+$direccion3="Cll 85 # 25-10 - ";
+$direccion4="Cll 100 sur # 355-27 - ";
+$direccion5="Cr 37 # 100-20 - ";
+
+$salario1=3520000;
+$salario2=4580000;
+$salario3=1250000;
+$salario4=3800000;
+$salario5=6490000;
+
+echo $usuario1.$telefono1.$direccion1." $".$salario1."<br>";
+echo $usuario2.$telefono2.$direccion2." $".$salario2."<br>";
+echo $usuario3.$telefono3.$direccion3." $".$salario3."<br>";
+echo $usuario4.$telefono4.$direccion4." $".$salario4."<br>";
+echo $usuario5.$telefono5.$direccion5." $".$salario5."<br>";
+
+$sumatoriaSalarios= $salario1+$salario2+$salario3+$salario4+$salario5;
+$salariosSucursalB=20000000;
+$salariosSucursalC=15000000;
+echo "<br>";
+
+if($sumatoriaSalarios > $salariosSucursalB && $sumatoriaSalarios > $salariosSucursalC)
+{
+    echo "El mayor ingreso lo tiene la sucursal A";
+}
+elseif($salariosSucursalB > $sumatoriaSalarios && $salariosSucursalB > $salariosSucursalC)
+{
+    echo "El mayor ingreso lo tiene la sucursal B";
+}
+else 
+{
+    echo "El mayor ingreso lo tiene la sucursal C";
+}
+
+echo"<br><br> Ejercicio 6 <br>";
+echo"<br>Almacena en un Array los 10 primeros números pares. Imprima en pantalla cada uno de estos, en una línea diferente con el siguiente
+formato <br>";
+
+$arreglo=array('1°'=>"2",'2°'=>"4",'3°'=>"6",'4°'=>"8",'5°'=>"10",'6°'=>"12",'7°'=>"14",'8°'=>"16",'9°'=>"18",'10°'=>"20" );
+foreach($arreglo as $clave=>$valor)
+{
+echo "<br>"."El ".$clave." numero par es: ";
+echo($valor);
+}
 
 
 
