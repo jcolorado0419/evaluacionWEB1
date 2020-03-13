@@ -182,6 +182,30 @@ echo "<br>"."El ".$clave." numero par es: ";
 echo($valor);
 }
 
+echo"<br><br> Ejercicio 7 <br>";
+echo"<br>Después de realizar una consulta en la base de datos DE LA JUGOSA SAS se tienen almacenados los valores de dicha consulta en un
+arreglo denominado salpicon, el cual presenta la siguiente configuración <br><br>";
+/*
+[dulce1]=>”Banano”
+[dulce2]=>”Manzana”
+[dulce3]=>”Durazno”
+[acido1]=>”Piña”
+[acido2]=>”Naranja”
+[dulce3]=>”Lulo”*/
+echo "El salpicon esta compuesto por:<br><br>";
+$salpicon=array('dulce1'=>"Banano",'dulce2'=>"Manzana",'dulce3'=>"Durazno",'acido1'=>"Piña",'acido2'=>"Naranja",'acido3'=>"Lulo");
+print_r($salpicon);
 
+echo"<br><br> Ejercicio 8 <br>";
+echo"<br>La federación nacional de fútbol necesita de sus servicios como desarrollador de software, para codificar una función en PHP que permita
+calcular la edad de los jugadores, de acuerdo al año de nacimiento de estos. Declare la función calcularEdad() y pruebe su funcionamiento
+con los años de nacimiento 1991,1995,1987. <br><br>";
+
+$edad=calcularEdad(1991,2020);
+echo("Si nacio en 1991 su edad es : ".$edad."<br>");
+$edad=calcularEdad(1995,2020);
+echo("Si nacio en 1995 su edad es : ".$edad."<br>");
+$edad=calcularEdad(1987,2020);
+echo("Si nacio en 1987 su edad es : ".$edad);
 
 ?>
