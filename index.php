@@ -1,4 +1,5 @@
 <?php
+include ('funciones.php');
 echo"<br> Julián Andrés Colorado castañeda <br>";
 echo"<br> Ejercicio 1 <br>";
 echo"<br>Hacer un programa en PHP que permita mostrar en pantalla la suma, resta, multiplicación, de dos números enteros almacenados en 2
@@ -207,5 +208,65 @@ $edad=calcularEdad(1995,2020);
 echo("Si nacio en 1995 su edad es : ".$edad."<br>");
 $edad=calcularEdad(1987,2020);
 echo("Si nacio en 1987 su edad es : ".$edad);
+
+echo"<br><br> Ejercicio 9 <br>";
+
+echo"<br>La federación nacional de fútbol también necesita que usted codifique una nueva función para establecer el biotipo de los jugadores
+
+teniendo en cuenta la estatura de estos. La clasificación internacional del Biotipo de futbolista es:
+
+Estatura <1.70 m (Biotipo Bajo)<br>
+
+1.70 m <=Estatura < 1.80 m (Biotipo Promedio)<br>
+
+Estatura >= 1,80 m (Biotipo Superior) <br><br>";
+
+$biotipo=calcularBiotipo(1.65);
+$biotipo=calcularBiotipo(1.78);
+$biotipo=calcularBiotipo(1.95);
+
+echo"<br><br> Ejercicio 10 <br>";
+
+echo"<br>La federación nacional de fútbol necesita de sus servicios como desarrollador de software, para codificar una función en PHP que permita
+
+calcular la edad de los jugadores, de acuerdo al año de nacimiento de estos. Declare la función calcularEdad() y pruebe su funcionamiento
+
+con los años de nacimiento 1991,1995,1987. <br><br>";
+
+
+$SeleccionColombia=array(
+
+'jugador1'=>array('Jugador'=>"Radamel Falcao",'Año de Nacimiento'=>edad(1986,2020),'Posicion'=>"Delatero",'Estatura'=>Biotipo(1.77)),
+
+'jugador2'=>array('Jugador'=>"James Rodríguez",'Año de Nacimiento'=>edad(1991,2020),'Posicion'=>"Medio Campista",'Estatura'=>Biotipo(1.81)),
+
+'jugador3'=>array('Jugador'=>"Juan Cuadrado",'Año de Nacimiento'=>edad(1988,2020),'Posicion'=>"Delantero",'Estatura'=>Biotipo(1.78)),
+
+'jugador4'=>array('Jugador'=>"Yerry Mina",'Año de Nacimiento'=>edad(1994,2020),'Posicion'=>"Defensor",'Estatura'=>Biotipo(1.95)),
+
+'jugador5'=>array('Jugador'=>"David Ospina",'Año de Nacimiento'=>edad(1988,2020),'Posicion'=>"Portero",'Estatura'=>Biotipo(1.83)),
+
+'jugador6'=>array('Jugador'=>"Davinsón Sanchez",'Año de Nacimiento'=>edad(1996,2020),'Posicion'=>"Defensor",'Estatura'=>Biotipo(1.87)),
+
+'jugador7'=>array('Jugador'=>"Duvan Zapata",'Año de Nacimiento'=>edad(1991,2020),'Posicion'=>"Delatero",'Estatura'=>Biotipo(1.86)),
+
+'jugador8'=>array('Jugador'=>"Wilmar Barrios",'Año de Nacimiento'=>edad(1993,2020),'Posicion'=>"Medio Campista",'Estatura'=>Biotipo(1.78)),
+
+'jugador9'=>array('Jugador'=>"Mateus Uribe",'Año de Nacimiento'=>edad(1991,2020),'Posicion'=>"Medio Campista",'Estatura'=>Biotipo(1.80))
+
+);
+
+foreach($SeleccionColombia as $arregloseleccion => $arreglosjugador)
+
+{
+    echo("<br>".$arregloseleccion)."<br>";
+
+    foreach($arreglosjugador as $claves=>$valores)
+
+    {
+        echo($valores)."<br>";
+    }
+
+}
 
 ?>
